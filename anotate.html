@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <title>Anótate a la Fiesta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-left">
+      <img src="images/bolsa-de-calabaza.png" alt="Icono de Víspera de Todos los Santos" class="icono-calabaza">
+    </div>
+    <div class="nav-right">
+        
+      <a href="index.html">Inicio</a>
+      
+      
+      <!-- Opción desplegable "La Fiesta" -->
+      <div class="dropdown">
+        <a href="#la-fiesta" class="dropbtn">La Fiesta</a>
+        <div class="dropdown-content">
+          <a href="la-fiesta.html">Dónde Nos Ubicamos</a>
+          <a href="dizfraz.html">¿Qué Disfraz Te Recomendamos?</a>
+          <a href="anotate.html">Anótate a la Fiesta</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Contenido Principal -->
+    <main>
+        
+    
+        
+           <!-- Sección Anótate a la Fiesta -->
+  <section id="anotate-fiesta">
+    <h1>Anótate a la Fiesta</h1>
+    <form id="form-anotate" action="#" method="post">
+      <ol>
+        <li>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan" required>
+        </li>
+        <li>
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" placeholder="Ej. Pérez" required>
+        </li>
+        <li>
+          <label for="celular">Número de Celular</label>
+          <input type="tel" id="celular" name="celular" placeholder="Ej. +54 911 2345 6789" required>
+        </li>
+        <li>
+          <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+          <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+        </li>
+        <li>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Ej. correo@ejemplo.com" required>
+        </li>
+      </ol>
+      <div class="checkbox-container">
+        <input type="checkbox" id="terminos" name="terminos" required>
+        <label for="terminos">Acepto los términos y condiciones</label>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+  <div id="customPrompt" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button" onclick="closePrompt()">&times;</span>
+      <p>¡Felicidades! Estás anotado a la fiesta más aterradora 🎃</p>
+      <button onclick="redirectToIndex()">Ir a Inicio</button>
+    </div>
+  </div>
+    </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">
+      <img src="images/bolsa-de-calabaza.png" alt="Logo de Hallowen SA">
+    </div>
+  
+    <!-- Separador hr con tono gris -->
+    <hr class="footer-separator">
+  
+    <div class="footer-text">
+      <p>Hallowen SA | Todos los derechos reservados</p>
+    </div>
+    
+    <div class="footer-social">
+      <a href="https://www.facebook.com/AyrtonAlexanderRupp/">
+        <img src="images/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/ayrtonalexanderupp/">
+        <img src="images/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/in/ayrtonrupp/">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+  </footer>
+  
+</body>
+<script src="anotate.js"></script>
+</html>

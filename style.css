@@ -1,0 +1,521 @@
+/* Estilos generales */
+
+
+body {
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Dirección vertical */
+    min-height: 100vh; /* Asegurar que el cuerpo ocupe al menos toda la altura de la ventana */
+    font-family: 'Rubik Wet Paint', cursive;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px; /* Evitar que el contenido quede detrás del footer */
+}
+
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: orange;
+    padding: 10px;
+    padding-bottom: 10px; /* Añadido */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+.nav-right a {
+    margin: 0 10px; /* Reducido el margen entre los enlaces */
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem; /* Ajusta el tamaño de la fuente según lo desees */
+   
+}
+
+.nav-left img {
+    width: 40px; /* Ajuste del tamaño del ícono de calabaza */
+}
+
+/* Contenido principal */
+main {
+    flex: 1; /* Esto permite que el main ocupe el espacio restante */
+    padding-bottom: 120px; 
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    padding-top: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 150px; /* Puedes ajustar este valor según sea necesario */
+    position:fixed;/* Cambiado a fixed */
+    bottom: 0; /* Esto lo coloca en la parte inferior de la ventana */
+  
+    
+}
+    
+
+/* Logo del footer */
+.footer-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo img {
+    width: 35px; /* Ajuste del tamaño del logo */
+    margin-bottom: 5px;
+}
+
+/* Separador HR en tono gris */
+.footer-separator {
+    width: 80%;
+    border: none;
+    border-top: 2px solid #b3b3b3; /* Tono gris */
+    margin: 10px 0;
+}
+
+/* Texto del footer */
+.footer-text {
+    font-size: 0.8rem; /* Tamaño de texto más pequeño para que se ajuste */
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* Enlaces de redes sociales */
+.footer-social {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social a img {
+    width: 25px; /* Ajuste del tamaño de los iconos */
+    margin: 0 8px;
+}
+
+/* Carousel */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Cambia a un porcentaje para más flexibilidad */
+    max-width: 1300px; /* Tamaño máximo */
+    margin: 100px auto 0; /* Centra el carrusel */
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+#carousel-image {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    max-height: 400px; /* Altura máxima para evitar que se estire demasiado */
+    object-fit: cover; /* Mantiene la proporción de aspecto sin distorsión */
+}
+
+#prev-button, #next-button {
+    position: absolute;
+    top: 50%;
+    background-color: orange;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+#prev-button {
+    left: 10px; /* Ajustado para estar más cerca del borde */
+}
+
+#next-button {
+    right: 10px; /* Ajustado para estar más cerca del borde */
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #carousel-image {
+        max-height: 300px; /* Reduce la altura máxima en pantallas pequeñas */
+    }
+
+    #prev-button, #next-button {
+        font-size: 24px; /* Ajusta el tamaño de los botones para pantallas más pequeñas */
+    }
+}
+
+
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 50px;
+    margin: 70px;
+}
+
+#acerca-de, #nuestro-staff {
+    background-color: #333; /* Fondo oscuro */
+    padding: 20px;
+    border-radius: 10px;
+    width: 48%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra ligera */
+}
+
+#acerca-de h1, #nuestro-staff h1 {
+    text-align: center;
+    color: #FFA500;
+    margin-bottom: 15px;
+}
+
+#acerca-de p, #nuestro-staff p {
+    color: #f0f0f0;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 0;
+}
+
+
+
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    footer {
+        height: auto; /* Ajuste para pantallas más pequeñas */
+    }
+
+    .footer-logo img {
+        width: 30px; /* Reducción del logo en pantallas pequeñas */
+    }
+
+    .footer-text {
+        font-size: 0.75rem; /* Tamaño de texto más pequeño */
+    }
+
+    .footer-social a img {
+        width: 20px; /* Tamaño reducido de iconos de redes sociales */
+    }
+
+    .section-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #acerca-de, #donde-nos-ubicamos {
+        width: 100%;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+}
+
+
+/* Estilo para el contenedor del menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-right: 60px;
+}
+
+/* Estilo del botón de la opción desplegable */
+.dropbtn {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Estilos del contenido del menú desplegable */
+.dropdown-content {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    background-color: orange;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+/* Estilos de las opciones dentro del menú desplegable */
+.dropdown-content a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    
+}
+
+/* Mostrar el menú desplegable al pasar el ratón */
+.dropdown:hover .dropdown-content {
+    display: block;
+    
+}
+
+/* Cambiar el color de fondo al pasar el ratón */
+.dropdown-content a:hover {
+    background-color: #b65f00; /* Color más oscuro al pasar el ratón */
+}
+
+  
+/* Sección Dónde Nos Ubicamos */
+.centered-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    width: 100%;
+}
+
+.map-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.map-container iframe {
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    height: 450px;
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    margin-bottom: 20px;
+}
+
+.map-legend {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+
+/* Sección Anótate a la Fiesta */
+#anotate-fiesta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  #anotate-fiesta h1 {
+    font-family: 'Rubik Wet Paint', cursive;
+    color: orange;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para el formulario */
+  #form-anotate {
+    width: 80%;
+    max-width: 600px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Rubik Wet Paint', cursive;
+  }
+  
+  #form-anotate ol {
+    padding-left: 20px;
+  }
+  
+  #form-anotate li {
+    list-style-type: decimal;
+    margin-bottom: 15px;
+  }
+  
+  #form-anotate label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #form-anotate input[type="text"],
+  #form-anotate input[type="tel"],
+  #form-anotate input[type="date"],
+  #form-anotate input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .checkbox-container label {
+    margin-left: 5px;
+  }
+  
+  #form-anotate button {
+    width: 100%;
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: 'Rubik Wet Paint', cursive;
+  }
+  
+  #form-anotate button:hover {
+    background-color: darkorange;
+  }
+
+  
+  /* Modal estilo personalizado */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: orange;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    font-family: 'Rubik Wet Paint', cursive;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Rubik Wet Paint', cursive;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #333;
+  }
+
+  
+/* Contenedor de las cards */
+.disfraz-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Estilos para cada card */
+  .card {
+    width: 30%; /* Permite que se muestren 3 cards por fila */
+    background-color: black;
+    color: white;
+    border: 2px solid orange;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card p {
+    padding: 10px;
+    font-family: 'Rubik Wet Paint', cursive;
+  }
+  
+  /* Interactividad en hover */
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.8);
+  }
+  
+  /* Responsivo: dos cards en pantallas medianas */
+  @media (max-width: 768px) {
+    .card {
+      width: 45%;
+    }
+  }
+  
+  /* Responsivo: una card en pantallas pequeñas */
+  @media (max-width: 480px) {
+    .card {
+      width: 100%;
+    }
+  }
+
+  
+/* Estilos para el modal */
+.modalcard {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modal-content {
+    margin: 5% auto;
+    display: block;
+    width: 60%;
+    max-width: 700px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: orange;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #modalCaption {
+    text-align: center;
+    color: orange;
+    padding: 15px;
+  }
+  
+  .dizfrazTitle{
+    padding: 20px;
+    margin: 20px;
+    display: block;
+    text-align: center;
+  }
+  
