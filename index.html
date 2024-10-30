@@ -7,13 +7,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/logos/calabaza.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navbar -->
 <nav>
     <div class="nav-left">
-      <img src="images/bolsa-de-calabaza.png" alt="Icono de Víspera de Todos los Santos" class="icono-calabaza">
+      <a href="index.html">
+        <img src="images/logos/bolsa-de-calabaza.png" alt="Icono de Víspera de Todos los Santos" class="icono-calabaza">
+      </a>
     </div>
     
     <div class="nav-right">
@@ -28,9 +31,9 @@
       <div class="dropdown">
         <a href="#la-fiesta" class="dropbtn">La Fiesta</a>
         <div class="dropdown-content">
-          <a href="la-fiesta.html">Dónde Nos Ubicamos</a>
-          <a href="dizfraz.html">¿Qué Disfraz Te Recomendamos?</a>
-          <a href="anotate.html">Anótate a la Fiesta</a>
+          <a href="html/la-fiesta.html">Dónde Nos Ubicamos</a>
+          <a href="html/dizfraz.html">¿Qué Disfraz Te Recomendamos?</a>
+          <a href="html/anotate.html">Anótate a la Fiesta</a>
         </div>
       </div>
     </div>
@@ -41,7 +44,7 @@
   <section id="inicio">
     <div class="carousel-container">
         <button id="prev-button" aria-label="Imagen anterior">❮</button>
-        <img id="carousel-image" src="carousel-images/calabazas.jpg" alt="Imagen de calabazas">
+        <img id="carousel-image" src="images/carousel-images/calabazas.jpg"Imagen de calabazas">
         <button id="next-button" aria-label="Imagen siguiente">❯</button>
     </div>
 </section>
@@ -62,19 +65,28 @@
       </p>
   </section>
 
-  <section id="nuestro-staff">
+  <section id="venir">
     <h1>¿Por que venir?</h1>
     <p>
       ¡No te pierdas nuestra fiesta de Halloween! Vístete con tu mejor disfraz, disfruta de juegos, música y sorpresas. Una noche para divertirte y vivir momentos inolvidables. ¡Te esperamos!
     </p>
 </section>
+
+<div id="cookie-banner" class="cookie-banner">
+  <p>Utilizamos cookies para mejorar tu experiencia en nuestro sitio web, personalizar contenido y analizar nuestro tráfico. Para obtener más información, consulta nuestra <a href="#" class="cookie-link">Política de Cookies</a>. ¿Aceptas el uso de cookies?</p>
+  <button id="accept-cookies" class="cookie-button">Sí, acepto</button>
+  <button id="decline-cookies" class="cookie-button">No acepto</button>
 </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-logo">
-      <img src="images/bolsa-de-calabaza.png" alt="Logo de Hallowen SA">
-    </div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="images/logos/bolsa-de-calabaza.png" alt="Icono de Víspera de Todos los Santos" class="icono-calabaza">
+        </a>
+      </div>
   
     <!-- Separador hr con tono gris -->
     <hr class="footer-separator">
@@ -85,19 +97,20 @@
     
     <div class="footer-social">
       <a href="https://www.facebook.com/AyrtonAlexanderRupp/">
-        <img src="images/facebook.png" alt="Facebook">
+        <img src="images/logos/facebook.png" alt="Facebook">
       </a>
       <a href="https://www.instagram.com/ayrtonalexanderupp/">
-        <img src="images/instagram.png" alt="Instagram">
+        <img src="images/logos/instagram.png" alt="Instagram">
       </a>
       <a href="https://www.linkedin.com/in/ayrtonrupp/">
-        <img src="images/linkedin.png" alt="LinkedIn">
+        <img src="images/logos/linkedin.png" alt="LinkedIn">
       </a>
     </div>
   </footer>
   
 
   <!-- JavaScript -->
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/cookies.js"></script>
 </body>
 </html>
