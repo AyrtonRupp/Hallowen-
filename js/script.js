@@ -44,15 +44,6 @@ document.querySelectorAll('.dropdown-content a').forEach(link => {
 });
 
 
-document.querySelectorAll('.section-container section p').forEach((p) => {
-    p.addEventListener('mouseenter', () => {
-        p.style.transform = 'scale(1.05)';
-        p.style.transition = 'transform 0.3s ease';
-    });
-    p.addEventListener('mouseleave', () => {
-        p.style.transform = 'scale(1)';
-    });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
     const cookieBanner = document.getElementById("cookie-banner");
