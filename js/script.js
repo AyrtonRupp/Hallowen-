@@ -1,8 +1,8 @@
 // Array de imágenes para el carrusel
 const images = [
-    '../images/carousel-images/calabazas.jpg',
-    '../images/carousel-images/dog.jpg',
-    '../images/carousel-images/hallowen.jpg'
+    'images/carousel-images/calabazas.jpg',
+    'images/carousel-images/dog.jpg',
+    'images/carousel-images/hallowen.jpg'
 ];
 
 let currentIndex = 0;
