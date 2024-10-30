@@ -1,10 +1,19 @@
-document.getElementById("accept-cookies").addEventListener("click", function() {
-    document.getElementById("cookie-banner").style.display = "none";
-    // Aquí podrías añadir código para guardar la preferencia en localStorage o cookies
+document.addEventListener("DOMContentLoaded", function () {
+  const cookieBanner = document.getElementById("cookie-banner");
+  const acceptButton = document.getElementById("accept-cookies");
+  const declineButton = document.getElementById("decline-cookies");
+
+  // Mostrar el banner si no hay cookies aceptadas
+  if (!localStorage.getItem("cookiesAccepted")) {
+    cookieBanner.style.display = "flex";
+  }
+
+  acceptButton.addEventListener("click", function () {
+    localStorage.setItem("cookiesAccepted", "true");
+    cookieBanner.style.display = "none";
   });
-  
-  document.getElementById("decline-cookies").addEventListener("click", function() {
-    document.getElementById("cookie-banner").style.display = "none";
-    // También podrías añadir código para manejar el rechazo de cookies
+
+  declineButton.addEventListener("click", function () {
+    cookieBanner.style.display = "none";
   });
-  
+});
