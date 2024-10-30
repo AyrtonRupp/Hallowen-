@@ -320,7 +320,7 @@ footer {
     font-family: 'Rubik Wet Paint', cursive;
   }
   
-  #form-anotate ol {
+  #form-anotate ul {
     padding-left: 20px;
   }
   
@@ -456,11 +456,7 @@ footer {
     font-family: 'Rubik Wet Paint', cursive;
   }
   
-  /* Interactividad en hover */
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255, 140, 0, 0.8);
-  }
+  
   
   /* Responsivo: dos cards en pantallas medianas */
   @media (max-width: 768px) {
