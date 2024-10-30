@@ -1,8 +1,8 @@
 // Array de imágenes para el carrusel
 const images = [
-    'carousel-images/calabazas.jpg',
-    'carousel-images/dog.jpg',
-    'carousel-images/hallowen.jpg'
+    '../images/carousel-images/calabazas.jpg',
+    '../images/carousel-images/dog.jpg',
+    '../images/carousel-images/hallowen.jpg'
 ];
 
 let currentIndex = 0;
@@ -54,3 +54,22 @@ document.querySelectorAll('.section-container section p').forEach((p) => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const cookieBanner = document.getElementById("cookie-banner");
+    const acceptButton = document.getElementById("accept-cookies");
+    const declineButton = document.getElementById("decline-cookies");
+  
+    // Mostrar el banner si no hay cookies aceptadas
+    if (!localStorage.getItem("cookiesAccepted")) {
+      cookieBanner.style.display = "flex";
+    }
+  
+    acceptButton.addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      cookieBanner.style.display = "none";
+    });
+  
+    declineButton.addEventListener("click", function () {
+      cookieBanner.style.display = "none";
+    });
+  });

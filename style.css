@@ -487,43 +487,38 @@ footer {
   }
 
 
-  /* Cookies */
-  
   .cookie-banner {
     position: fixed;
-    bottom: 20px;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.85);
-    color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con transparencia */
+    color: #f8d7da; /* Color claro para el texto */
     padding: 20px;
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-    font-family: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid orange; /* Un borde que imita un fuego */
+    z-index: 1000;
+    display: none; /* Inicialmente oculto */
+    font-family: 'Rubik Wet Paint', cursive; /* Fuente temática */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para un efecto 3D */
   }
   
   .cookie-button {
-    margin: 10px 5px;
+    margin: 5px; 
     padding: 10px 20px;
-    background-color: #555;
+    background-color: orange; /* Un rojo oscuro */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición para el efecto hover */
   }
   
   .cookie-button:hover {
-    background-color: #333;
+    background-color: orange; /* Rojo más brillante al pasar el mouse */
   }
   
-  .cookie-link {
-    color: #fff;
-    text-decoration: underline;
-  }
-  
-  .cookie-link:hover {
-    color: #ddd;
-  }
   
