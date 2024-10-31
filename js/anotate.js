@@ -12,6 +12,6 @@ document.getElementById('form-anotate').addEventListener('submit', function(even
   
   // Función para redirigir al index
   function redirectToIndex() {
-    window.location.href = 'index.html';
+    window.location.href = '../index.html';
   }
   
