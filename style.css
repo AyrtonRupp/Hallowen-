@@ -92,17 +92,39 @@ footer {
     margin-bottom: 5px;
 }
 
-/* Enlaces de redes sociales */
+/* Redes sociales en el footer */
 .footer-social {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espaciado uniforme entre los iconos */
+  margin-top: 10px;
 }
 
-.footer-social a img {
-    width: 25px; /* Ajuste del tamaño de los iconos */
-    margin: 0 8px;
+.footer-social a {
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block;
+  color: #fff; /* Color inicial de los iconos */
+  font-size: 1.5rem; /* Tamaño de los iconos */
+  transition: transform 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
+/* Efecto hover para los iconos */
+.footer-social a:hover {
+  transform: scale(1.2); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+/* Colores específicos para cada red social */
+.footer-social .github:hover {
+  color: #171515; /* Negro para GitHub */
+}
+
+.footer-social .instagram:hover {
+  color: #E4405F; /* Rojo/rosado para Instagram */
+}
+
+.footer-social .linkedin:hover {
+  color: #0077B5; /* Azul para LinkedIn */
+}
 /* Carousel */
 .carousel-container {
     display: flex;
