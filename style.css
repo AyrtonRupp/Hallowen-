@@ -97,7 +97,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 15px; /* Espaciado uniforme entre los iconos */
-  margin-top: 10px;
+  margin:10px 0
 }
 
 .footer-social a {
@@ -539,4 +539,53 @@ footer {
     background-color: orange; /* Rojo más brillante al pasar el mouse */
   }
   
-  
+  /* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra */
+  background-color: #000; /* Fondo oscuro */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #F57C00; /* Color del thumb (parte que se mueve) - Naranja */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 2px solid #333; /* Borde oscuro */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #FF6F00; /* Naranja más claro cuando se pasa el mouse */
+}
+
+/* Scrollbar en el eje horizontal */
+::-webkit-scrollbar-horizontal {
+  height: 8px; /* Altura de la barra horizontal */
+}
+
+
+/* No ocultamos el cursor, pero usamos un pseudo-elemento para mostrar el ícono de fantasma */
+body {
+  cursor: none;
+}
+
+body {
+  cursor: url('/images/logos/ghost.svg'), auto; /* Asegúrate de tener la ruta correcta */
+}
+
+body::after {
+   /* Código Unicode para el ícono fa-ghost */
+  font-family: 'Font Awesome 6 Free'; /* Asegúrate de que esté cargado */
+  font-weight: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+
+body:hover::after {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+
