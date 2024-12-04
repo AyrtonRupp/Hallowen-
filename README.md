@@ -13,9 +13,6 @@ Una página web desarrollada para una fiesta temática de Halloween, diseñada p
 - **CSS3**: Para el diseño, efectos y animaciones.  
 - **JavaScript**: Para las funcionalidades interactivas y dinámicas.  
 
-## 📸 Capturas de Pantalla  
-### Página Principal  
-![Página Principal](./assets/img/hallowen.png)  
 
 ## 🚀 Cómo Ejecutarlo Localmente  
 1. Clona este repositorio:  
